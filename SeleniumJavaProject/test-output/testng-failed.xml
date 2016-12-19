@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite1]">
+  <parameter name="test" value="dhruv"/>
+  <test name="Test1(failed)">
+    <parameter name="test" value="dhruv"/>
+    <classes>
+      <class name="SeleniumPack.JenkinsTest">
+        <methods>
+          <include name="JenTest"/>
+        </methods>
+      </class> <!-- SeleniumPack.JenkinsTest -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+</suite> <!-- Failed suite [Suite1] -->
