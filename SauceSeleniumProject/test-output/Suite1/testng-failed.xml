@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite1]">
+  <test name="Test1(failed)">
+    <classes>
+      <class name="SeleniumPack.SauceTest">
+        <methods>
+          <include name="SauceLabsTest" invocation-numbers="0 1 3 2 4"/>
+        </methods>
+      </class> <!-- SeleniumPack.SauceTest -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+</suite> <!-- Failed suite [Suite1] -->
