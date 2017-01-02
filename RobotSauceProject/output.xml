@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0 (Jython 2.7.0 on java1.8.0_111)" generated="20170102 14:47:31.690">
+<suite source="C:\Users\dhruv.mishra\workspace\RobotSauceProject\TestCases\TestCase.robot" name="TestCase" id="s1">
+<test name="Open Google Test" id="s1-t1">
+<kw library="Google" name="Open Google">
+<kw type="for" name="${OS} IN [ @{SAUCE_OS} ]">
+<kw type="foritem" name="${OS} = Windows 10">
+<kw library="Collections" name="Get Index From List">
+<doc>Returns the index of the first occurrence of the ``value`` on the list.</doc>
+<arguments>
+<arg>${SAUCE_OS}</arg>
+<arg>${OS}</arg>
+</arguments>
+<assign>
+<var>${index}</var>
+</assign>
+<msg level="INFO" timestamp="20170102 14:47:37.861">${index} = 0</msg>
+<status endtime="20170102 14:47:37.862" starttime="20170102 14:47:37.849" status="PASS"></status>
+</kw>
+<kw library="Collections" name="Get From List">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${SAUCE_BROWSER}</arg>
+<arg>${index}</arg>
+</arguments>
+<assign>
+<var>${BROWSER}</var>
+</assign>
+<msg level="INFO" timestamp="20170102 14:47:37.873">${BROWSER} = firefox</msg>
+<status endtime="20170102 14:47:37.874" starttime="20170102 14:47:37.864" status="PASS"></status>
+</kw>
+<kw library="Collections" name="Get From List">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${SAUCE_VERSION}</arg>
+<arg>${index}</arg>
+</arguments>
+<assign>
+<var>${VERSION}</var>
+</assign>
+<msg level="INFO" timestamp="20170102 14:47:37.881">${VERSION} = 49.0</msg>
+<status endtime="20170102 14:47:37.883" starttime="20170102 14:47:37.875" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Create Dictionary">
+<doc>Creates and returns a dictionary based on given items.</doc>
+<arguments>
+<arg>platform=${OS}</arg>
+<arg>browserName=${BROWSER}</arg>
+<arg>version=${VERSION}</arg>
+</arguments>
+<assign>
+<var>${Caps}</var>
+</assign>
+<msg level="INFO" timestamp="20170102 14:47:37.907">${Caps} = {u'platform': u'Windows 10', u'browserName': u'firefox', u'version': u'49.0'}</msg>
+<status endtime="20170102 14:47:37.910" starttime="20170102 14:47:37.885" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Create Webdriver">
+<doc>Creates an instance of a WebDriver.</doc>
+<arguments>
+<arg>Remote</arg>
+<arg>desired_capabilities=${Caps}</arg>
+<arg>command_executor=${SAUCE_URL}</arg>
+</arguments>
+<msg level="INFO" timestamp="20170102 14:47:37.917">Creating an instance of the Remote WebDriver</msg>
+<status endtime="20170102 14:47:49.559" starttime="20170102 14:47:37.912" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Go To">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg level="INFO" timestamp="20170102 14:47:49.569">Opening url 'http://www.google.com'</msg>
+<status endtime="20170102 14:47:51.996" starttime="20170102 14:47:49.562" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Close Browser">
+<doc>Closes the current browser.</doc>
+<status endtime="20170102 14:47:53.396" starttime="20170102 14:47:52.000" status="PASS"></status>
+</kw>
+<status endtime="20170102 14:47:53.399" starttime="20170102 14:47:37.847" status="PASS"></status>
+</kw>
+<kw type="foritem" name="${OS} = Windows 7">
+<kw library="Collections" name="Get Index From List">
+<doc>Returns the index of the first occurrence of the ``value`` on the list.</doc>
+<arguments>
+<arg>${SAUCE_OS}</arg>
+<arg>${OS}</arg>
+</arguments>
+<assign>
+<var>${index}</var>
+</assign>
+<msg level="INFO" timestamp="20170102 14:47:53.416">${index} = 1</msg>
+<status endtime="20170102 14:47:53.417" starttime="20170102 14:47:53.406" status="PASS"></status>
+</kw>
+<kw library="Collections" name="Get From List">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${SAUCE_BROWSER}</arg>
+<arg>${index}</arg>
+</arguments>
+<assign>
+<var>${BROWSER}</var>
+</assign>
+<msg level="INFO" timestamp="20170102 14:47:53.454">${BROWSER} = internet explorer</msg>
+<status endtime="20170102 14:47:53.455" starttime="20170102 14:47:53.419" status="PASS"></status>
+</kw>
+<kw library="Collections" name="Get From List">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${SAUCE_VERSION}</arg>
+<arg>${index}</arg>
+</arguments>
+<assign>
+<var>${VERSION}</var>
+</assign>
+<msg level="INFO" timestamp="20170102 14:47:53.463">${VERSION} = 11.0</msg>
+<status endtime="20170102 14:47:53.464" starttime="20170102 14:47:53.456" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Create Dictionary">
+<doc>Creates and returns a dictionary based on given items.</doc>
+<arguments>
+<arg>platform=${OS}</arg>
+<arg>browserName=${BROWSER}</arg>
+<arg>version=${VERSION}</arg>
+</arguments>
+<assign>
+<var>${Caps}</var>
+</assign>
+<msg level="INFO" timestamp="20170102 14:47:53.483">${Caps} = {u'platform': u'Windows 7', u'browserName': u'internet explorer', u'version': u'11.0'}</msg>
+<status endtime="20170102 14:47:53.484" starttime="20170102 14:47:53.466" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Create Webdriver">
+<doc>Creates an instance of a WebDriver.</doc>
+<arguments>
+<arg>Remote</arg>
+<arg>desired_capabilities=${Caps}</arg>
+<arg>command_executor=${SAUCE_URL}</arg>
+</arguments>
+<msg level="INFO" timestamp="20170102 14:47:53.492">Creating an instance of the Remote WebDriver</msg>
+<status endtime="20170102 14:48:00.484" starttime="20170102 14:47:53.486" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Go To">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg level="INFO" timestamp="20170102 14:48:00.496">Opening url 'http://www.google.com'</msg>
+<status endtime="20170102 14:48:04.832" starttime="20170102 14:48:00.491" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Close Browser">
+<doc>Closes the current browser.</doc>
+<status endtime="20170102 14:48:05.933" starttime="20170102 14:48:04.833" status="PASS"></status>
+</kw>
+<status endtime="20170102 14:48:05.934" starttime="20170102 14:47:53.402" status="PASS"></status>
+</kw>
+<kw type="foritem" name="${OS} = OS X 10.11">
+<kw library="Collections" name="Get Index From List">
+<doc>Returns the index of the first occurrence of the ``value`` on the list.</doc>
+<arguments>
+<arg>${SAUCE_OS}</arg>
+<arg>${OS}</arg>
+</arguments>
+<assign>
+<var>${index}</var>
+</assign>
+<msg level="INFO" timestamp="20170102 14:48:05.939">${index} = 2</msg>
+<status endtime="20170102 14:48:05.939" starttime="20170102 14:48:05.936" status="PASS"></status>
+</kw>
+<kw library="Collections" name="Get From List">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${SAUCE_BROWSER}</arg>
+<arg>${index}</arg>
+</arguments>
+<assign>
+<var>${BROWSER}</var>
+</assign>
+<msg level="INFO" timestamp="20170102 14:48:05.946">${BROWSER} = safari</msg>
+<status endtime="20170102 14:48:05.946" starttime="20170102 14:48:05.941" status="PASS"></status>
+</kw>
+<kw library="Collections" name="Get From List">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${SAUCE_VERSION}</arg>
+<arg>${index}</arg>
+</arguments>
+<assign>
+<var>${VERSION}</var>
+</assign>
+<msg level="INFO" timestamp="20170102 14:48:05.954">${VERSION} = 10.0</msg>
+<status endtime="20170102 14:48:05.955" starttime="20170102 14:48:05.948" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Create Dictionary">
+<doc>Creates and returns a dictionary based on given items.</doc>
+<arguments>
+<arg>platform=${OS}</arg>
+<arg>browserName=${BROWSER}</arg>
+<arg>version=${VERSION}</arg>
+</arguments>
+<assign>
+<var>${Caps}</var>
+</assign>
+<msg level="INFO" timestamp="20170102 14:48:05.963">${Caps} = {u'platform': u'OS X 10.11', u'browserName': u'safari', u'version': u'10.0'}</msg>
+<status endtime="20170102 14:48:05.964" starttime="20170102 14:48:05.957" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Create Webdriver">
+<doc>Creates an instance of a WebDriver.</doc>
+<arguments>
+<arg>Remote</arg>
+<arg>desired_capabilities=${Caps}</arg>
+<arg>command_executor=${SAUCE_URL}</arg>
+</arguments>
+<msg level="INFO" timestamp="20170102 14:48:05.971">Creating an instance of the Remote WebDriver</msg>
+<status endtime="20170102 14:48:30.709" starttime="20170102 14:48:05.966" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Go To">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg level="INFO" timestamp="20170102 14:48:30.721">Opening url 'http://www.google.com'</msg>
+<status endtime="20170102 14:48:33.394" starttime="20170102 14:48:30.712" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Close Browser">
+<doc>Closes the current browser.</doc>
+<status endtime="20170102 14:48:34.613" starttime="20170102 14:48:33.398" status="PASS"></status>
+</kw>
+<status endtime="20170102 14:48:34.615" starttime="20170102 14:48:05.935" status="PASS"></status>
+</kw>
+<status endtime="20170102 14:48:34.616" starttime="20170102 14:47:37.844" status="PASS"></status>
+</kw>
+<status endtime="20170102 14:48:34.619" starttime="20170102 14:47:37.840" status="PASS"></status>
+</kw>
+<status critical="yes" endtime="20170102 14:48:34.625" starttime="20170102 14:47:37.830" status="PASS"></status>
+</test>
+<status endtime="20170102 14:48:34.657" starttime="20170102 14:47:31.702" status="PASS"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" name="TestCase" id="s1">TestCase</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

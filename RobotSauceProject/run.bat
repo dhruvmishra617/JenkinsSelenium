@@ -1,0 +1,1 @@
+jybot ./TestCases/TestCase.robot
